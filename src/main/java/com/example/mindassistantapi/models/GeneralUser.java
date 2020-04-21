@@ -1,7 +1,9 @@
 package com.example.mindassistantapi.models;
 
+import javax.persistence.Entity;
 import java.util.Objects;
 
+@Entity
 public class GeneralUser extends User {
     private String occupation;
 
