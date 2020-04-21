@@ -1,1 +1,52 @@
-<h1>Welcome to spring boot</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MA-API</title>
+
+    <!-- Added bootstrap styling, styling for all webapps, and specific styling for the manager page -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+          rel="stylesheet"/>
+    <link href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+          rel="stylesheet">
+    <link href="/css/styles.css"
+          rel="stylesheet"/>
+
+</head>
+<body>
+<div class="container-fluid">
+    <div>
+        <nav class="navbar navbar-dark bg-dark">
+            <span class="navbar-brand mb-0 h1">Welcome to the Mind-Assistant API!</span>
+        </nav>
+    </div>
+
+    <div class="row">
+        <div class="col">
+            <a class="nav-link"
+               href="../api/users">
+                All Users (contains all data except profile)
+            </a>
+            <a class="nav-link"
+               href="../api/profiles">
+                All Profiles (contains all data)
+            </a>
+            <a class="nav-link"
+               href="../api/notes">
+                All Notes
+            </a>
+            <a class="nav-link"
+               href="../api/folders">
+                All Folders
+            </a>
+            <a class="nav-link"
+               href="../api/labels">
+                All Labels
+            </a>
+        </div>
+    </div>
+</div>
+
+
+</body>
+</html>
