@@ -1,6 +1,5 @@
 package com.example.mindassistantapi.models;
 
-import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import javax.persistence.*;
 import java.util.List;
@@ -48,7 +47,6 @@ public class User {
     private com.example.mindassistantapi.models.Profile profile;
 
     @OneToMany(mappedBy = "user")
-    @JsonIgnore
     private List<com.example.mindassistantapi.models.Note> notes;
 
     @OneToMany(mappedBy = "user")
