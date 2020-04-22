@@ -60,6 +60,7 @@ public class NoteController {
     }
 
     // SEARCH FOR NOTE
+    // api/notes/search?note=criteria
     @RequestMapping("api/notes/search")
     public List<Note> searchForNote(@RequestParam Optional<String> note) {
         return service.searchForNote(note.orElse("_"));
