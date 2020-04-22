@@ -1,6 +1,8 @@
 package com.example.mindassistantapi.models;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+
 import javax.persistence.*;
 import java.util.List;
 import java.util.Objects;
@@ -16,7 +18,7 @@ public class Note {
     private String status = "private";
 
     @ManyToOne
-    @JsonIgnore
+    @JsonManagedReference
     private User user;
 
     @ManyToOne
