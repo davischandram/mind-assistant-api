@@ -29,7 +29,7 @@ public class Note {
 
     @ManyToOne
     @JsonIgnore
-    private com.example.mindassistantapi.models.Folder folder;
+    private Folder folder;
 
     @ManyToMany
     @JsonIgnore
@@ -40,7 +40,7 @@ public class Note {
 //   name = "course_like", 
 //   joinColumns = @JoinColumn(name = "student_id"), 
 //   inverseJoinColumns = @JoinColumn(name = "course_id"))
-    private List<com.example.mindassistantapi.models.Label> labels;
+    private List<Label> labels;
 
     public int getId() {
         return id;
@@ -74,7 +74,7 @@ public class Note {
         this.status = status;
     }
 
-    public com.example.mindassistantapi.models.Folder getFolder() {
+    public Folder getFolder() {
         return folder;
     }
 
@@ -86,15 +86,15 @@ public class Note {
         this.user = user;
     }
 
-    public void setFolder(com.example.mindassistantapi.models.Folder folder) {
+    public void setFolder(Folder folder) {
         this.folder = folder;
     }
 
-    public List<com.example.mindassistantapi.models.Label> getLabels() {
+    public List<Label> getLabels() {
         return labels;
     }
 
-    public void setLabels(List<com.example.mindassistantapi.models.Label> labels) {
+    public void setLabels(List<Label> labels) {
         this.labels = labels;
     }
 

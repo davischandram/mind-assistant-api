@@ -45,17 +45,17 @@ public class User {
 
     @OneToOne(mappedBy = "user", cascade = CascadeType.ALL)
     @JsonIgnore
-    private com.example.mindassistantapi.models.Profile profile;
+    private Profile profile;
 
     @OneToMany(mappedBy = "user")
     // @JsonBackReference
-    private List<com.example.mindassistantapi.models.Note> notes;
+    private List<Note> notes;
 
     @OneToMany(mappedBy = "user")
-    private List<com.example.mindassistantapi.models.Folder> folders;
+    private List<Folder> folders;
 
     @OneToMany(mappedBy = "user")
-    private List<com.example.mindassistantapi.models.Label> labels;
+    private List<Label> labels;
 
     public int getId() {
         return id;
@@ -105,35 +105,35 @@ public class User {
         this.role = role;
     }
 
-    public com.example.mindassistantapi.models.Profile getProfile() {
+    public Profile getProfile() {
         return profile;
     }
 
-    public void setProfile(com.example.mindassistantapi.models.Profile profile) {
+    public void setProfile(Profile profile) {
         this.profile = profile;
     }
 
-    public List<com.example.mindassistantapi.models.Note> getNotes() {
+    public List<Note> getNotes() {
         return notes;
     }
 
-    public void setNotes(List<com.example.mindassistantapi.models.Note> notes) {
+    public void setNotes(List<Note> notes) {
         this.notes = notes;
     }
 
-    public List<com.example.mindassistantapi.models.Folder> getFolders() {
+    public List<Folder> getFolders() {
         return folders;
     }
 
-    public void setFolders(List<com.example.mindassistantapi.models.Folder> folders) {
+    public void setFolders(List<Folder> folders) {
         this.folders = folders;
     }
 
-    public List<com.example.mindassistantapi.models.Label> getLabels() {
+    public List<Label> getLabels() {
         return labels;
     }
 
-    public void setLabels(List<com.example.mindassistantapi.models.Label> labels) {
+    public void setLabels(List<Label> labels) {
         this.labels = labels;
     }
 
