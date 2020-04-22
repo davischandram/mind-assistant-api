@@ -10,7 +10,7 @@ import java.util.List;
 
 @RestController
 @CrossOrigin(
-        origins = {"http://localhost:3000", "https://mind-assistant.herokuapp.com/"},
+        origins = {"https://mind-assistant.herokuapp.com/"},
         allowCredentials = "true"
 )
 public class UserController {
