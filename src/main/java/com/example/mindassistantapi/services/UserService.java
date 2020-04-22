@@ -46,4 +46,8 @@ public class UserService {
             return 0;
         }
     }
+
+    public List<User> searchForUser(String query) {
+        return userRepo.searchForUser(query);
+    }
 }

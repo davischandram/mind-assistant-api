@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 import javax.servlet.http.HttpSession;
 import java.util.List;
+import java.util.Optional;
 
 @RestController
 @CrossOrigin(
@@ -62,5 +63,10 @@ public class UserController {
     @DeleteMapping("/api/users/{uid}")
     public int deleteUser(@PathVariable("uid") int userId){
         return service.deleteUser(userId);
+    }
+
+    @RequestMapping("/api/users/search")
+    public List<User> searchForUser(@RequestParam Optional<String> query){
+        return service.searchForUser(query.orElse("_"));
     }
 }

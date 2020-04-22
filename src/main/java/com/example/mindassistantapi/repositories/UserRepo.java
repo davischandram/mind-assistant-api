@@ -21,13 +21,9 @@ public interface UserRepo extends CrudRepository<User, Integer> {
             @Param("username") String username,
             @Param("password") String password);
 
-    // @Modifying
-    // @Query("update User user set user.dtype = :dtype where user.id = :uid")
-    // public void updateDtype(
-    //     @Param("dtype") String dtype,
-    //     @Param("uid") int uid);
-     
 
+    @Query("select u from User u where (username like %?1%) or (lname like %?1%) or (fname like %?1%)" )
+    public List<User> searchForUser(String query);
 
     
 }
