@@ -22,6 +22,11 @@ public class Note {
     @JsonIgnore
     private User user;
 
+    @Transient
+    public int getUserId(){
+        return this.user.getId();
+    }
+
     @ManyToOne
     @JsonIgnore
     private com.example.mindassistantapi.models.Folder folder;
