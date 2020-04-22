@@ -65,6 +65,8 @@ public class UserController {
         return service.deleteUser(userId);
     }
 
+    // SEARCH FOR NOTE
+    // api/users/search?query=criteria
     @RequestMapping("/api/users/search")
     public List<User> searchForUser(@RequestParam Optional<String> query){
         return service.searchForUser(query.orElse("_"));
