@@ -19,7 +19,7 @@ public class Note {
 
     @ManyToOne
     
-    @JsonManagedReference
+    @JsonIgnore
     private User user;
 
     @ManyToOne

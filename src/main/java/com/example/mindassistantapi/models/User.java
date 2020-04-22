@@ -48,7 +48,7 @@ public class User {
     private com.example.mindassistantapi.models.Profile profile;
 
     @OneToMany(mappedBy = "user")
-    @JsonBackReference
+    // @JsonBackReference
     private List<com.example.mindassistantapi.models.Note> notes;
 
     @OneToMany(mappedBy = "user")
