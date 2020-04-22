@@ -18,7 +18,8 @@ public class Note {
     private String status = "private";
 
     @ManyToOne
-    @JsonManagedReference
+    // @JsonManagedReference
+    @JsonIgnore
     private User user;
 
     @ManyToOne
