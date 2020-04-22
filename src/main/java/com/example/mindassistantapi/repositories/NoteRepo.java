@@ -24,5 +24,4 @@ public interface NoteRepo extends JpaRepository<Note, Integer> {
 
     @Query("select n from Note n where note like %?1%")
     public List<Note> searchForNote(String note);
-// %?1%
 }
