@@ -20,4 +20,12 @@ public class StudentController {
     public List<StudentUser> findAllStudentUsers(){
         return service.findAllStudentUsers();
     }
+
+    @PostMapping("/api/students")
+    public StudentUser createStudentUser(@RequestBody StudentUser newUser)
+    {
+        return service.createStudentUser(newUser);
+
+    }
+    
 }

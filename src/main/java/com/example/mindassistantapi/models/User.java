@@ -6,6 +6,12 @@ import java.util.List;
 
 @Entity
 @Table(name = "users")
+// @Inheritance(strategy = InheritanceType.SINGLE_TABLE)
+// @DiscriminatorColumn(
+//     discriminatorType = DiscriminatorType.STRING,
+//     // name = "user_type_id",
+//     columnDefinition = "VARCHAR(200)"
+// )
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -16,6 +22,25 @@ public class User {
     private String fname;
     private String lname;
     private String role;
+    private String school;
+    private String occupation;
+
+    public String getSchool() {
+        return this.school;
+    }
+
+    public void setSchool(String school) {
+        this.school = school;
+    }
+
+    public String getOccupation() {
+        return this.occupation;
+    }
+
+    public void setOccupation(String occupation) {
+        this.occupation = occupation;
+    }
+
 
     @OneToOne(mappedBy = "user", cascade = CascadeType.ALL)
     @JsonIgnore

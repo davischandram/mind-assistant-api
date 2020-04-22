@@ -1,6 +1,8 @@
 package com.example.mindassistantapi.repositories;
 
 import com.example.mindassistantapi.models.User;
+
+import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.data.repository.query.Param;
@@ -18,4 +20,14 @@ public interface UserRepo extends CrudRepository<User, Integer> {
     public User findUserByCredentials(
             @Param("username") String username,
             @Param("password") String password);
+
+    // @Modifying
+    // @Query("update User user set user.dtype = :dtype where user.id = :uid")
+    // public void updateDtype(
+    //     @Param("dtype") String dtype,
+    //     @Param("uid") int uid);
+     
+
+
+    
 }

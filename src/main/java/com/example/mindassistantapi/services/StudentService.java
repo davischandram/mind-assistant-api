@@ -15,4 +15,8 @@ public class StudentService {
     public List<StudentUser> findAllStudentUsers(){
         return studentRepo.findAllStudentUsers();
     }
+
+	public StudentUser createStudentUser(StudentUser newUser) {
+		return studentRepo.save(newUser);
+	}
 }

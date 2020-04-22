@@ -20,4 +20,12 @@ public class GeneralController {
     public List<GeneralUser> findAllGeneralUsers(){
         return service.findAllGeneralUsers();
     }
+
+    @PostMapping("/api/generalUsers")
+    public GeneralUser createGeneralUser(@RequestBody GeneralUser newUser)
+    {
+        return service.createGeneralUser(newUser);
+
+    }
+
 }
