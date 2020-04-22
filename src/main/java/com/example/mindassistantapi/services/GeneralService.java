@@ -15,4 +15,8 @@ public class GeneralService {
     public List<GeneralUser> findAllGeneralUsers(){
         return (List<GeneralUser>) generalRepo.findAll();
     }
+
+	public GeneralUser createGeneralUser(GeneralUser newUser) {
+		return generalRepo.save(newUser);
+	}
 }

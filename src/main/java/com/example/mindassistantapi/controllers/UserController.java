@@ -1,5 +1,6 @@
 package com.example.mindassistantapi.controllers;
 
+import com.example.mindassistantapi.models.*;
 import com.example.mindassistantapi.models.User;
 import org.springframework.web.bind.annotation.*;
 import com.example.mindassistantapi.services.UserService;
@@ -54,6 +55,7 @@ public class UserController {
     @PutMapping("/api/users/{uid}")
     public int updateUser(@PathVariable("uid") int userId, @RequestBody User updated, HttpSession session){
         session.setAttribute("currentUser", updated);
+
         return service.updateUser(userId, updated);
     }
 
