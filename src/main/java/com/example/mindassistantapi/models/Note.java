@@ -32,7 +32,6 @@ public class Note {
     private Folder folder;
 
     @ManyToMany
-    @JsonIgnore
 //    "@JoinTable" and its options are optional to avoid JPA defaults, 
 //         otherwise JPA will choose how to name columns. Only one side of the many to many needs this.
 //              Simply pick the side that makes most sense. Somewhat arbitrary.
@@ -44,6 +43,19 @@ public class Note {
 
     public int getId() {
         return id;
+    }
+
+    @Override
+    public String toString() {
+        return "Note{" +
+                "id=" + id +
+                ", note='" + note + '\'' +
+                ", title='" + title + '\'' +
+                ", status='" + status + '\'' +
+                ", user=" + user +
+                ", folder=" + folder +
+                ", labels=" + labels +
+                '}';
     }
 
     public void setId(int id) {

@@ -44,9 +44,14 @@ public class NoteService {
     }
 
     public Note createNoteForFolder(int folderId, Note note){
+//        System.out.println(note);
         Folder folder = folderRepo.findFolderById(folderId);
         note.setFolder(folder);
         note.setUser(folder.getUser());
+//        List<Label> labels = note.getLabels();
+//        for(int i = 0; i < labels.size(); i++){
+//            System.out.println(labels.get(i).getTitle());
+//        }
         return noteRepo.save(note);
     }
 
